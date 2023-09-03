@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            .modal {
+                border-radius: 5px;
+                border: 1px solid #355EFC;
+                box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.36);
+                height: 400px;
+                width: 600px;
+                align-items: center;
+
+            }
+
+            .modal::backdrop {
+                background: rgb(0 0 0 / .4);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <button class="open-button">open modal</button>
+        <dialog class="modal" id="modal">
+            <h2>hhddik dfjdkj</h2>
+            <p>hheheh jjjkj</p>
+            <button class="close-button">close</button>
+
+        </dialog>
+
+
+        <script>
+            const modal = document.querySelector('#modal');
+            const openModal = document.querySelector('.open-button');
+            const closeModal = document.querySelector('.close-button');
+
+            openModal.addEventListener('click', () => {
+                modal.showModal();
+            })
+
+            closeModal.addEventListener('click', () => {
+                modal.close();
+            })
+        </script>
+    </body>
+</html>
